@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" role="img" aria-label="FiliP – Vereinsheim TSV Göllsdorf">
+  <!-- Aussichtsturm -->
+  <g fill="#ffffff" stroke="#ffffff">
+    <!-- Dach -->
+    <polygon points="252,170 348,170 300,104" stroke="none"/>
+    <!-- Dachkante -->
+    <rect x="268" y="170" width="64" height="7" stroke="none"/>
+    <!-- Pfosten -->
+    <rect x="276" y="177" width="7" height="168" stroke="none"/>
+    <rect x="317" y="177" width="7" height="168" stroke="none"/>
+    <!-- Fenster oben -->
+    <rect x="283" y="200" width="34" height="30" fill="none" stroke-width="6"/>
+    <!-- Kreuzstrebe -->
+    <line x1="283" y1="300" x2="317" y2="340" stroke-width="6" stroke-linecap="round"/>
+    <line x1="317" y1="300" x2="283" y2="340" stroke-width="6" stroke-linecap="round"/>
+    <!-- Sockel -->
+    <rect x="270" y="345" width="60" height="7" stroke="none"/>
+  </g>
+  <text x="300" y="328" text-anchor="middle" font-family="'Dancing Script','Brush Script MT',cursive" font-size="20" font-style="italic" fill="#ffffff">Rolje</text>
+
+  <!-- Blauer Bogen -->
+  <path d="M 92 446 Q 300 338 508 446" fill="none" stroke="#6f9fc0" stroke-width="7" stroke-linecap="round"/>
+  <!-- FiliP Schriftzug -->
+  <text x="300" y="438" text-anchor="middle" font-family="'Dancing Script','Brush Script MT',cursive" font-weight="700" font-size="76" fill="#ffffff" font-style="italic">FiliP</text>
+  <!-- Trennlinie -->
+  <line x1="180" y1="462" x2="420" y2="462" stroke="#6f9fc0" stroke-width="2"/>
+  <!-- Untertitel -->
+  <text x="300" y="492" text-anchor="middle" font-family="'Inter',Arial,sans-serif" font-size="20" letter-spacing="4" fill="#ffffff">VEREINSHEIM TSV GÖLLSDORF</text>
+</svg>
