@@ -5,7 +5,7 @@
   "use strict";
 
   /* ---- Empfänger-Adresse: hier zentral anpassbar ---- */
-  var EMPFAENGER = "info@filip-goellsdorf.de";
+  var EMPFAENGER = "info@f-ili-p.de";
   /* Optionaler Webhook-Endpoint (z. B. n8n/Make). Leer lassen für reinen Mailto-Versand. */
   var NOTIFY_ENDPOINT = "";
 
