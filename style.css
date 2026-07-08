@@ -139,6 +139,12 @@ h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;lett
 .heroimg{position:relative;border:2px solid var(--ink);padding:7px;background:var(--bg);box-shadow:var(--shadow)}
 .heroimg::after{content:"";position:absolute;inset:4px;border:1px solid var(--line-2);pointer-events:none;z-index:2}
 .heroimg img{display:block;width:100%;height:auto;position:relative;z-index:1}
+/* Impressionen-Galerie */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.gitem{margin:0;border:1.5px solid var(--ink);background:var(--bg);padding:7px;box-shadow:var(--shadow);transition:transform .25s var(--ease)}
+.gitem:hover{transform:translateY(-3px)}
+.gitem img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media(max-width:760px){.gallery{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
 .herologo__tag{display:flex;justify-content:center;gap:.5rem;margin-top:1.4rem;padding-top:1.4rem;flex-wrap:wrap;border-top:1px solid var(--line)}
 .tag{font-family:var(--label);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);padding:.35rem .8rem;background:var(--bg-2)}
 
