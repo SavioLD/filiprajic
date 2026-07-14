@@ -148,6 +148,20 @@ h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;lett
 .herologo__tag{display:flex;justify-content:center;gap:.5rem;margin-top:1.4rem;padding-top:1.4rem;flex-wrap:wrap;border-top:1px solid var(--line)}
 .tag{font-family:var(--label);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);padding:.35rem .8rem;background:var(--bg-2)}
 
+/* ============================ URLAUB / HINWEIS ============================ */
+.vacay{background:var(--blue);color:#fff}
+.vacay__inner{display:flex;align-items:center;justify-content:center;gap:.75rem;
+  padding:.85rem 1.2rem;text-align:center}
+.vacay svg{width:22px;height:22px;flex:none;opacity:.95}
+.vacay p{margin:0;font-family:var(--serif);font-size:1.02rem;line-height:1.35}
+.vacay b{font-weight:700}
+.hours__note{border-left:3px solid var(--blue);background:var(--bg-2);
+  padding:.7rem .95rem;border-radius:6px}
+@media (max-width:560px){
+  .vacay__inner{flex-direction:column;gap:.4rem}
+  .vacay p{font-size:.96rem}
+}
+
 /* ============================ INFO-LEISTE ============================ */
 .strip{border-bottom:1px solid var(--line);background:var(--bg-2)}
 .strip__inner{display:grid;grid-template-columns:repeat(3,1fr)}
