@@ -232,6 +232,12 @@ h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;lett
 .hours__day{font-family:var(--serif);font-weight:600}
 .hours__time{color:var(--muted);font-variant-numeric:tabular-nums}
 .hours__time.closed{font-style:italic}
+.hours__kitchen{display:flex;align-items:center;gap:.75rem;margin:0;
+  padding:.95rem 1.4rem;border-top:2px solid var(--ink);background:var(--bg-2)}
+.hours__kitchen svg{width:20px;height:20px;color:var(--blue);flex:none}
+.hours__kitchen span{font-family:var(--serif);font-weight:600;font-size:1rem;line-height:1.3}
+.hours__kitchen small{display:block;font-weight:400;font-style:italic;color:var(--muted);
+  font-size:.85rem;margin-top:.15rem}
 .hours__badge{display:inline-block;margin-left:.6rem;font-family:var(--label);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--blue);padding:.1rem .5rem;vertical-align:middle}
 .hours__aside{border:2px solid var(--ink);padding:1.9rem;background:var(--bg)}
 .hours__aside h3{font-size:1.5rem;margin-bottom:.5rem}
