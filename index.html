@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css?v=8" />
+<link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
 
@@ -31,6 +31,7 @@
       <a href="#ueber">Über uns</a>
       <a href="#speisekarte">Speisekarte</a>
       <a href="#impressionen">Impressionen</a>
+      <a href="#catering">Catering</a>
       <a href="#oeffnungszeiten">Öffnungszeiten</a>
       <a href="#anfrage">Anfrage</a>
     </nav>
@@ -43,6 +44,7 @@
     <a href="#ueber">Über uns</a>
     <a href="#speisekarte">Speisekarte</a>
     <a href="#impressionen">Impressionen</a>
+    <a href="#catering">Catering</a>
     <a href="#oeffnungszeiten">Öffnungszeiten</a>
     <a href="#anfrage">Anfrage</a>
     <a href="#anfrage" class="btn btn--primary btn--block">Tisch reservieren</a>
@@ -219,6 +221,98 @@
       <figure class="gitem"><img src="bild-1.jpg" alt="Maultaschen mit Röstzwiebeln und Bratensoße" loading="lazy" /></figure>
       <figure class="gitem"><img src="bild-2.jpg" alt="Frischer Fitnesssalat mit Blick in den Gastraum" loading="lazy" /></figure>
       <figure class="gitem"><img src="bild-3.jpg" alt="Salatteller mit frischem Brot" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PARTYSERVICE & CATERING ============================ -->
+<section class="section section--alt" id="catering">
+  <div class="shell">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Partyservice &amp; Catering</span>
+      <h2>Wir übernehmen dein Catering.</h2>
+      <p class="section__lead">Ob Geburtstag, Taufe, Firmenfeier oder Vereinsfest – vom liebevoll angerichteten Fingerfood über frische Salatbuffets bis zu warmen Speisen wie Spätzle, Braten und hausgemachten Soßen stellen wir dein Buffet ganz nach deinen Wünschen zusammen. Lieferung oder Abholung, kleine Runde oder großes Fest.</p>
+    </div>
+
+    <div class="gallery gallery--4 reveal">
+      <figure class="gitem"><img src="catering-1.jpg" alt="Fingerfood-Platten: Blätterteigschnecken, Käse-Trauben-Spieße und Pasta-Cups" loading="lazy" /></figure>
+      <figure class="gitem"><img src="catering-2.jpg" alt="Catering-Buffet mit Pasta-Cups und herzhaftem Gebäck" loading="lazy" /></figure>
+      <figure class="gitem"><img src="catering-3.jpg" alt="Reich gedecktes Buffet für eine Feier" loading="lazy" /></figure>
+      <figure class="gitem"><img src="catering-4.jpg" alt="Langes Catering-Buffet mit vielfältiger Auswahl" loading="lazy" /></figure>
+      <figure class="gitem"><img src="party-1.jpg" alt="Frisches Salatbuffet vom FiliP Partyservice" loading="lazy" /></figure>
+      <figure class="gitem"><img src="party-2.jpg" alt="Warmes Buffet mit Spätzle, Fleisch und hausgemachten Soßen" loading="lazy" /></figure>
+      <figure class="gitem"><img src="catering-5.jpg" alt="Salat-Cups und herzhaftes Gebäck auf dem Buffet" loading="lazy" /></figure>
+      <figure class="gitem"><img src="catering-6.jpg" alt="Getränkeservice mit Sekt und Saft" loading="lazy" /></figure>
+    </div>
+
+    <!-- Catering-Anfrageformular -->
+    <div class="cater__form reveal" id="catering-anfrage">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">Catering-Anfrage</span>
+        <h3>Catering unverbindlich anfragen</h3>
+      </div>
+      <form class="form" id="cateringForm" novalidate>
+        <div class="form__grid">
+          <div class="field field--full">
+            <label for="c-anlass">Anlass <span class="req">*</span></label>
+            <select id="c-anlass" required>
+              <option value="Geburtstag">Geburtstag</option>
+              <option value="Taufe">Taufe</option>
+              <option value="Hochzeit">Hochzeit</option>
+              <option value="Familienfeier">Familienfeier</option>
+              <option value="Firmenfeier">Firmenfeier</option>
+              <option value="Vereinsfest">Vereinsfest</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-name">Name <span class="req">*</span></label>
+            <input id="c-name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="c-telefon">Telefon <span class="req">*</span></label>
+            <input id="c-telefon" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="field field--full">
+            <label for="c-email">E-Mail</label>
+            <input id="c-email" type="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="c-datum">Datum der Veranstaltung <span class="req">*</span></label>
+            <input id="c-datum" type="date" required />
+          </div>
+          <div class="field">
+            <label for="c-personen">Personen <span class="req">*</span></label>
+            <input id="c-personen" type="number" min="1" max="500" placeholder="z. B. 40" required />
+          </div>
+          <div class="field">
+            <label for="c-art">Gewünschtes Angebot</label>
+            <select id="c-art">
+              <option value="Fingerfood / Buffet-Platten">Fingerfood / Buffet-Platten</option>
+              <option value="Salatbuffet">Salatbuffet</option>
+              <option value="Warmes Buffet">Warmes Buffet</option>
+              <option value="Komplettpaket / nach Absprache">Komplettpaket / nach Absprache</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-lieferung">Lieferung oder Abholung</label>
+            <select id="c-lieferung">
+              <option value="Noch offen">Noch offen</option>
+              <option value="Lieferung">Lieferung</option>
+              <option value="Abholung">Abholung</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="c-nachricht">Nachricht</label>
+            <textarea id="c-nachricht" placeholder="Wünsche, Speisen, Budget, Ort der Feier …"></textarea>
+          </div>
+        </div>
+        <div class="form__foot">
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Catering-Anfrage senden</button>
+          <p class="form__hint">Mit dem Absenden öffnet sich dein E-Mail-Programm mit der vorausgefüllten Anfrage an uns. Lieber direkt? Ruf uns an: <a href="tel:+491602990089" style="color:var(--blue-2)">0160 2990089</a>.</p>
+          <div class="form__msg form__msg--ok" id="cateringMsg">Danke! Deine Catering-Anfrage ist vorbereitet – bitte sende die geöffnete E-Mail ab. Wir melden uns schnellstmöglich bei dir.</div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -522,6 +616,6 @@ fill="#6f9fc0" stroke="none">
   </div>
 </footer>
 
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

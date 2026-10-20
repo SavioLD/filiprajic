@@ -141,6 +141,69 @@
     });
   }
 
+  /* ---------- Catering-Formular ---------- */
+  var cForm = $("#cateringForm");
+  var cMsg = $("#cateringMsg");
+  if (cForm) {
+    var cDate = $("#c-datum");
+    if (cDate) {
+      var ct = new Date();
+      cDate.min = ct.getFullYear() + "-" +
+        String(ct.getMonth() + 1).padStart(2, "0") + "-" +
+        String(ct.getDate()).padStart(2, "0");
+    }
+    cForm.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var data = {
+        anlass: val("c-anlass"),
+        name: val("c-name"),
+        telefon: val("c-telefon"),
+        email: val("c-email"),
+        datum: val("c-datum"),
+        personen: val("c-personen"),
+        art: val("c-art"),
+        lieferung: val("c-lieferung"),
+        nachricht: val("c-nachricht")
+      };
+
+      if (NOTIFY_ENDPOINT) {
+        fetch(NOTIFY_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        }).catch(function () {});
+      }
+
+      var subject = "Catering-Anfrage FiliP – " + data.anlass + " – " + data.name;
+      var lines = [
+        "Catering-Anfrage",
+        "",
+        "Anlass: " + data.anlass,
+        "Name: " + data.name,
+        "Telefon: " + data.telefon,
+        "E-Mail: " + data.email,
+        "Datum der Veranstaltung: " + data.datum,
+        "Personen: " + data.personen,
+        "Gewünschtes Angebot: " + data.art,
+        "Lieferung/Abholung: " + data.lieferung,
+        "",
+        "Nachricht:",
+        data.nachricht || "—"
+      ];
+      var mailto = "mailto:" + EMPFAENGER +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(lines.join("\n"));
+
+      if (cMsg) {
+        cMsg.classList.add("is-show");
+        cMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      var cw = window.open(mailto, "_blank");
+      if (!cw) window.location.href = mailto;
+      cForm.reset();
+    });
+  }
+
   function val(id) {
     var el = document.getElementById(id);
     return el ? String(el.value || "").trim() : "";
